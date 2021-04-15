@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../../shared/Navbar/Navbar';
+import HomeMainHeader from '../HomeMainHeader/HomeMainHeader';
 
 const Home = () => {
     return (
         <div>
-            <Navbar />
+            <HomeMainHeader />
         </div>
     );
 };
