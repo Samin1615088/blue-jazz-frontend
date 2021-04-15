@@ -1,3 +1,8 @@
+$color-primary: #5170eb;
+$color-secondary: #eb5160ff;
+$color-bg-card: rgba(169, 215, 255, 0.6);
+$color-bg-light: rgba(231, 214, 255, 0.6);
+
 .home-main-header {
   background-image: url("./../../../images/bg-banner-op.jpg");
   background-position: center;
@@ -12,7 +17,7 @@
 }
 
 .header-content {
-  background-color: rgba(169, 215, 255, 0.6);
+  background-color: $color-bg-light;
   padding: 20px;
   width: 60%;
   margin: 90px auto;

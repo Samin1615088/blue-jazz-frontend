@@ -1,13 +1,28 @@
 $color-primary: #5170eb;
 $color-secondary: #eb5160ff;
-$color-black: rgb(0, 0, 0);
-$color-bg-light: #e7d6ffff;
+$color-bg-card: rgba(169, 215, 255, 0.6);
+$color-bg-light: rgba(231, 214, 255, 0.6);
 
 .schedule-container {
-//   background-color: $color-black;
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   font-family: "Josefin Sans", sans-serif;
+  background-image: url("./../../../images/schedule-bg-op.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
 }
+
+.event-container {
+
+}
+
+.event-container div div div:nth-child(2n+1){
+  background: $color-secondary;
+}
+.event-container div div div:nth-child(2){
+  background: white;
+}
+.event-container div div div:last-child{
+  background: white;
+}
+
 

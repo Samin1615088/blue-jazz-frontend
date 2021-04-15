@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeMainHeader.css';
+import './HomeMainHeader.scss';
 import Navbar from '../../shared/Navbar/Navbar';
 
 const HomeMainHeader = () => {
