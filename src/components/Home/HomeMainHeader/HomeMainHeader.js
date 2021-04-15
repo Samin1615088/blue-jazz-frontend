@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './HomeMainHeader.scss';
 import Navbar from '../../shared/Navbar/Navbar';
 
-const HomeMainHeader = () => {
+const HomeMainHeader = ({ reference, click }) => {
+
     return (
         <section className="home-main-header vh-100">
             <Navbar />
@@ -14,7 +15,9 @@ const HomeMainHeader = () => {
                 <div className="text-light text-center">
                     <h4>MUSIC IS NOT A DRUG. IT'S AN  ADDICTION</h4>
                 </div>
-                <button className="btn btn-brand mt-5">CHECK OUR SERVICES</button>
+                <div ref={reference}>
+                    <button className="btn btn-brand mt-5" onClick={click}>CHECK OUR SERVICES</button>
+                </div>
             </div>
         </section>
     );
