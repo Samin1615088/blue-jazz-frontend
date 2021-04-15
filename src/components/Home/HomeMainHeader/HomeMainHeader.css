@@ -1,7 +1,19 @@
-section{
-    background-image: url("./../../../images/bg-banner-op.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.home-main-header {
+  background-image: url("./../../../images/bg-banner-op.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
+}
 
+.home-main-header h1 {
+  font-weight: bolder;
+  color: #eb5160ff;
+}
+
+.header-content {
+  background-color: rgba(169, 215, 255, 0.6);
+  padding: 20px;
+  width: 60%;
+  margin: 90px auto;
 }
