@@ -7,8 +7,8 @@ import drinkImg from './../../../images/drinks-service-op.jpg';
 
 const servicesData = [
     { serviceName: "Tent Service", serviceDescription: "Our service is the best you can find", serviceImg: tentImg, price: 330 },
-    { serviceName: "Food Service",serviceDescription: "Our service is the best you can find", serviceImg: foodImg, price: 130 },
-    { serviceName: "Beverage Service",serviceDescription: "Our service is the best you can find", serviceImg: drinkImg, price: 40 }
+    { serviceName: "Food Service", serviceDescription: "Our service is the best you can find", serviceImg: foodImg, price: 130 },
+    { serviceName: "Beverage Service", serviceDescription: "Our service is the best you can find", serviceImg: drinkImg, price: 40 }
 ];
 
 const Services = ({ reference }) => {

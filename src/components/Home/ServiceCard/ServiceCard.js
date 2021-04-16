@@ -1,10 +1,10 @@
 import React from 'react';
 import './ServiceCard.scss';
 
-const ServiceCard = ({serviceData}) => {
+const ServiceCard = ({ serviceData }) => {
     return (
         <div className="col">
-            <div className="card-container card h-100">
+            <div className="card-container card h-100 service-card-container">
                 <img src={serviceData.serviceImg} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h4 className="card-title fw-bold text-uppercase">{serviceData.serviceName}</h4>

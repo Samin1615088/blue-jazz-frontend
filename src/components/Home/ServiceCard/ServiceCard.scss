@@ -4,15 +4,15 @@ $color-bg-card: rgba(169, 215, 255, 1);
 $color-bg-light: rgba(231, 214, 255, 0.6);
 
 /* card styling */
-.card-container {
+.service-card-container {
     border: 2px solid white;
     background-color: $color-bg-card;
 }
-.card-container h4{
+.service-card-container h4{
     color: $color-secondary;
 }
 
-.card-container footer{
+.service-card-container footer{
     border-top: 1px double white;
     color: $color-secondary;
 }
