@@ -5,7 +5,7 @@ import Navbar from '../../shared/Navbar/Navbar';
 const HomeMainHeader = ({ reference, click }) => {
 
     return (
-        <section className="home-main-header vh-100">
+        <section className="container-fluid home-main-header vh-100">
             <Navbar />
             <div className="header-content d-flex flex-column justify-content-center align-items-center h-50">
                 <div className="">

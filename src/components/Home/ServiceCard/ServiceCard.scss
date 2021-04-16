@@ -1,22 +1,28 @@
 $color-primary: #5170eb;
 $color-secondary: #eb5160ff;
-$color-bg-card: rgba(169, 215, 255, 1);
+$color-bg-card: rgba(169, 215, 255, 1);  //this unique don't copy
 $color-bg-light: rgba(231, 214, 255, 0.6);
+$color-bg-dark: #252628;
+$color-bg-white-shade: #eaf4fc;
+$color-gold: #ffbf00;
 
 /* card styling */
 .service-card-container {
-    border: 2px solid white;
-    background-color: $color-bg-card;
+  border: 2px solid white;
+  background-color: $color-bg-card;
 }
-.service-card-container h4{
-    color: $color-secondary;
-}
-
-.service-card-container footer{
-    border-top: 1px double white;
-    color: $color-secondary;
+.service-card-container h4 {
+  color: $color-secondary;
 }
 
+.service-card-container footer {
+  border-top: 1px double white;
+  background-color: $color-bg-white-shade;
+  color: $color-secondary;
+}
+.service-card-container footer>strong {
+  color: $color-gold;
+}
 
 /* button */
 .btn-brand {

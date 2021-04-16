@@ -28,7 +28,7 @@ const upcomingEventsData = [
 
 const Schedule = () => {
     return (
-        <section className="vh-100 schedule-container d-flex flex-column justify-content-center">
+        <section className=" container-fluid  vh-100 schedule-container d-flex flex-column justify-content-center ">
             <div className="event-container container h-75 text-center">
                 <h2 className="display-5 fw-light text-light">Our Upcoming Events</h2>
                 <div className="container-fluid mt-5">

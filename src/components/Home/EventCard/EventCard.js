@@ -4,7 +4,6 @@ const EventCard = (props) => {
     const { date, eventName, place, image } = props.eventData;
     const splittedDate = date.split(' ');
     return (
-        <div>
             <div className='row text-white my-3'>
                 <div className="col-6 col-md-3 d-flex flex-column justify-content-center">
                     <p><span className="display-5 fw-bold">{splittedDate[0]}</span> <span>{splittedDate[1] + splittedDate[2]}</span></p>
@@ -20,7 +19,6 @@ const EventCard = (props) => {
                     <button className="btn-brand px-2">Details</button>
                 </div>
             </div>
-        </div>
     );
 };
 

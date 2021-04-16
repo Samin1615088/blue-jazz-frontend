@@ -9,7 +9,10 @@ const TestimonialCard = ({ userTestimonialData }) => {
     return (
         <div className="col">
             <div className="card-container card h-100 testimonial-card-container">
-                <img src="https://dummyimage.com/600x400/000/fff" className="card-img-top" alt="..." />
+                <div className="text-center">
+                    <img src="https://dummyimage.com/100x100/000/fff" className="img-fluid rounded-3" alt="..." />
+                </div>
+
                 <div className="card-body">
                     <h4 className="card-title fw-bold text-uppercase">{userTestimonialData.userName}</h4>
                     <p className="card-text">{userTestimonialData.msg}</p>
