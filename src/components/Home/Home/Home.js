@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
+import ContactUs from '../ContactUs/ContactUs';
 import HomeMainHeader from '../HomeMainHeader/HomeMainHeader';
 import Schedule from '../Schedule/Schedule';
 import Services from '../Services/Services';
 import Testimonial from '../Testimonial/Testimonial';
+import Footer from '../../shared/Footer/Footer';
 
 const Home = () => {
 
@@ -18,6 +20,8 @@ const Home = () => {
             <Schedule />
             <Services reference={el2To} />
             <Testimonial />
+            <ContactUs />
+            <Footer />
         </div>
     );
 };
