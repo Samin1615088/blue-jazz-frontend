@@ -1,0 +1,35 @@
+$color-primary: #5170eb;
+$color-secondary: #eb5160ff;
+$color-bg-card: rgba(169, 215, 255, 0.6);
+$color-bg-light: rgba(231, 214, 255, 0.6);
+$color-bg-dark: #252628;
+$color-bg-white-shade: #eaf4fc;
+$color-gold: #ffbf00;
+
+.color-primary {
+  color: #5170eb;
+}
+
+.color-secondary {
+  color: #eb5160ff;
+}
+
+.color-bg-light {
+  background-color: #e7d6ff;
+}
+
+/* button */
+.btn-brand {
+  color: white;
+  margin: 2px;
+  border-radius: 5px;
+  background-color: $color-secondary;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.3s ease-out;
+}
+.btn-brand:hover {
+  background-color: transparent;
+  border: 3px solid $color-secondary;
+  color: $color-secondary;
+}
