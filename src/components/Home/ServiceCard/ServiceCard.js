@@ -1,5 +1,6 @@
 import React from 'react';
 import './ServiceCard.scss';
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
     return (
@@ -12,7 +13,8 @@ const ServiceCard = ({ service }) => {
                 </div>
                 <footer className="card-footer d-flex justify-content-between align-items-center">
                     <strong className="fs-3">$ {service.price}</strong>
-                    <button className="btn btn-brand text-uppercase">Buy This</button>
+                    <Link to="/orderProcess"><button className="btn btn-brand text-uppercase">Buy This</button>
+                    </Link>
                 </footer>
             </div>
         </div>

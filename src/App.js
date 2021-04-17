@@ -10,6 +10,7 @@ import { createContext, useState } from 'react';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import OrderProcess from './components/OrderProcess/OrderProcess';
 
 export const UserContext = createContext();
 
@@ -24,6 +25,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <PrivateRoute path="/orderProcess">
+              < OrderProcess/>
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
