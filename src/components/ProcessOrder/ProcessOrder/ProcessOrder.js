@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router';
-import { UserContext } from '../../App';
+import { useHistory, useParams } from 'react-router';
+import { UserContext } from '../../../App';
+import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
-const OrderProcess = () => {
+const ProcessOrder = () => {
     const { serviceId } = useParams();
     //orderInfo 
     const [orderInfo, setOrderInfo] = useState('');
@@ -11,6 +12,9 @@ const OrderProcess = () => {
     const [orderedService, setOrderedService] = useState({});
     //loading 
     const [loading, setLoading] = useState(false);
+    const [flag, setFlag] = useState(true);
+
+    const history = useHistory();
 
 
     //USER CONTEXT data receiving using context>
@@ -38,17 +42,44 @@ const OrderProcess = () => {
     const onSubmit = (data) => {
         data.serviceName = orderedService.serviceName;
         data.price = orderedService.price;
+        data.orderTime = new Date(Date.now()).toDateString();
         setOrderInfo(data);
+        setFlag(false);
     }
     console.log('orderInfo', orderInfo);
     //react hook form<< <<
+
+
+    //after payment-process>> >>
+    const handlePaymentSuccess = (paymentId, paymentCard) => {
+        const currentOrderInfo = { ...orderInfo };
+        const paymentInfo = { paymentId, last4CardNo: paymentCard };
+        currentOrderInfo.paymentInfo = paymentInfo;
+        setOrderInfo(currentOrderInfo);
+        console.log("currentOrderInfo", currentOrderInfo);
+
+        //sending data to server >
+        fetch('http://localhost:5000/processOrder', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentOrderInfo)
+        })
+            .then(response => response.json())
+            .then(res => {
+                console.log("response from server", res);
+                history.push('/dashboard')
+            });
+        //sending data to server <
+
+    }
+    //after payment-process<< <<
 
     return (
         <div className="container vh-100">
             <div className="row row-cols-md-2 row-cols-1 h-100">
                 {/* form */}
                 <div className="col d-flex flex-column justify-content-center">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    {flag && <form onSubmit={handleSubmit(onSubmit)}>
                         <fieldset>
                             <div className="form-group mb-3">
                                 <label className="form-label text-light fs-5 w-100">Customer Name
@@ -88,14 +119,17 @@ const OrderProcess = () => {
                             }
                         </fieldset>
                     </form>
+                    }
                 </div>
                 {/* stripe payment */}
-                <div className="col-12 col-md-6">
-
-                </div>
+                {!flag &&
+                    <div className="col-12 col-md-6 d-flex flex-column justify-content-center ">
+                        <ProcessPayment handlePaymentSuccess={handlePaymentSuccess} />
+                    </div>
+                }
             </div>
-        </div>
+        </div >
     );
 };
 
-export default OrderProcess;
+export default ProcessOrder;

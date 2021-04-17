@@ -8,7 +8,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={({ location }) =>
-                (userStatus.isLoggedIn === true) ? (
+                (userStatus.isLoggedIn/*|| sessionStorage.getItem('token')*/) ? (
                     children
                 ) : (
                     <Redirect
