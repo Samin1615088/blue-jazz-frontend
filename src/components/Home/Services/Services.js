@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.scss';
 import tentImg from './../../../images/tent-service-op.jpg';
@@ -12,6 +12,20 @@ const servicesData = [
 ];
 
 const Services = ({ reference }) => {
+    const [allServices, setAllServices] = useState([]);
+
+    //get all products from server>>
+    useEffect(() => {
+        fetch(`http://localhost:5000/allServices`)
+            .then(response => response.json())
+            .then(data => {
+                setAllServices(data);
+            })
+            .catch(error => console.log(error))
+    }, []);
+    //get all products from server<<
+
+
     return (
         <section ref={reference} className="service-container vh-100 d-flex flex-column justify-content-center">
             <div className="container h-75 text-center">
@@ -19,7 +33,7 @@ const Services = ({ reference }) => {
 
                 <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
                     {
-                        servicesData.map((serviceData, index) => < ServiceCard key={index} serviceData={serviceData} />)
+                        allServices?.map((service, index) => < ServiceCard key={index} service={service} />)
                     }
                 </div>
             </div>

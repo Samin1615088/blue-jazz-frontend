@@ -4,18 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
-const TestimonialCard = ({ userTestimonialData }) => {
+const TestimonialCard = ({ testimonial }) => {
 
     return (
         <div className="col">
             <div className="card-container card h-100 testimonial-card-container">
                 <div className="text-center">
-                    <img src="https://dummyimage.com/100x100/000/fff" className="img-fluid rounded-3" alt="..." />
+                    <img src={testimonial.img ? testimonial.img : "https://dummyimage.com/200x200/000/ff0048&text=Image+Not+Available"} className="img-fluid rounded-3" alt="..." />
                 </div>
 
                 <div className="card-body">
-                    <h4 className="card-title fw-bold text-uppercase">{userTestimonialData.userName}</h4>
-                    <p className="card-text">{userTestimonialData.msg}</p>
+                    <h4 className="card-title fw-bold text-uppercase">{testimonial.userName}</h4>
+                    <p className="card-text">{testimonial.msg}</p>
                 </div>
                 <footer className="card-footer d-flex justify-content-start">
                     <FontAwesomeIcon className="ms-2" icon={faStar} />

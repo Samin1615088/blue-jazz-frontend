@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
 import './Testimonial.scss';
 
-const usersTestimonialsData = [
-    { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 },
-    { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 },
-    { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 }
-];
+// const usersTestimonialsData = [
+//     { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 },
+//     { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 },
+//     { userName: "Rahim", msg: "I loved their services", profilePic: "", rating: 3 }
+// ];
 
 const Testimonial = () => {
+
+    const [allTestimonials, setAllTestimonials] = useState([]);
+
+    //get all Testimonials from server>>
+    useEffect(() => {
+        fetch(`http://localhost:5000/allTestimonials`)
+            .then(response => response.json())
+            .then(data => {
+                setAllTestimonials(data);
+            })
+            .catch(error => console.log(error))
+    }, []);
+    //get all products from server<<
+
     return (
         <section className="testimonial-container vh-100  d-flex flex-column justify-content-center">
 
@@ -17,7 +31,7 @@ const Testimonial = () => {
 
                 <div className=" row row-cols-1 row-cols-md-3 g-4 mt-5">
                     {
-                        usersTestimonialsData.map((userTestimonialData, index) => <TestimonialCard key={index} userTestimonialData={userTestimonialData} />)
+                        allTestimonials.map((testimonial, index) => <TestimonialCard key={index} testimonial={testimonial} />)
                     }
 
                 </div>
