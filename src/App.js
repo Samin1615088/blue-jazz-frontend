@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import { createContext, useState } from 'react';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';

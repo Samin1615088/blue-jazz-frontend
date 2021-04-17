@@ -53,13 +53,14 @@ const ProcessOrder = () => {
     //after payment-process>> >>
     const handlePaymentSuccess = (paymentId, paymentCard) => {
         const currentOrderInfo = { ...orderInfo };
+        currentOrderInfo.orderStatus = "pending";
         const paymentInfo = { paymentId, last4CardNo: paymentCard };
         currentOrderInfo.paymentInfo = paymentInfo;
         setOrderInfo(currentOrderInfo);
         console.log("currentOrderInfo", currentOrderInfo);
 
         //sending data to server >
-        fetch('http://localhost:5000/processOrder', {
+        fetch('https://localhost:5000/processOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(currentOrderInfo)
@@ -107,13 +108,13 @@ const ProcessOrder = () => {
 
                             {
                                 loading ?
-                                    (<div class="text-center">
+                                    (<div className="text-center">
                                         <button type="submit" className="btn btn-brand">Submit</button>
                                     </div>)
                                     :
-                                    (<div class="text-center">
-                                        <div class="spinner-border text-danger" role="status">
-                                            <span class="visually-hidden">Loading...</span>
+                                    (<div className="text-center">
+                                        <div className="spinner-border text-danger" role="status">
+                                            <span className="visually-hidden">Loading...</span>
                                         </div>
                                     </div>)
                             }
