@@ -42,12 +42,27 @@ const Login = () => {
                 currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
                 currentUserCreated.profilePicUrl = user.photoURL;
                 setUserStatus(currentUserCreated);
+                //setting token >
+                storeAuthToken();
+                //setting token <
                 history.replace(from);
             }).catch((error) => {
                 console.log(error.message);
             });
     }
-    //firebase SignIn By Google<< <<
+    //firebase SignIn By Google<< << 
+    //firebase auth token >> >> >>
+    const storeAuthToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+            .then(idToken => {
+                //setting on session storage
+                //    console.log("idToken", idToken);
+                sessionStorage.setItem('token', idToken)
+            }).catch(function (error) {
+                // Handle error
+            });
+    }
+    //firebase auth token >> >> >>
 
     return (
         <div className="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
