@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <PrivateRoute path="/orderProcess">
+            <PrivateRoute path="/orderProcess/:serviceId">
               < OrderProcess/>
             </PrivateRoute>
             <PrivateRoute path="/dashboard">
