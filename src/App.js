@@ -11,6 +11,7 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import ProcessOrder from './components/ProcessOrder/ProcessOrder/ProcessOrder';
 import DUserAllServices from './components/DUserAllServices/DUserAllServices';
 import DAddReview from './components/DAddReview/DAddReview';
+import DAllOrderedServiceAdmin from './components/DAllOrderedServiceAdmin/DAllOrderedServiceAdmin';
 
 export const UserContext = createContext();
 
@@ -37,6 +38,10 @@ function App() {
 
             <PrivateRoute path="/dashboard/user/addreview">
               <DAddReview/>
+            </PrivateRoute>
+            
+            <PrivateRoute path="/dashboard/admin/allorders">
+              <DAllOrderedServiceAdmin/>
             </PrivateRoute>
             {/* danger */}
 
