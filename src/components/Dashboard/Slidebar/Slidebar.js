@@ -28,8 +28,8 @@ const Slidebar = () => {
                     !isAdmin ?
                         (<div>
                             <li>
-                                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                                    <FontAwesomeIcon icon={faGripHorizontal} /> <span>Order Service dummy</span>
+                                <Link to="/serviceId" style={{ textDecoration: "none", color: "white" }}>
+                                    <FontAwesomeIcon icon={faGripHorizontal} /> <span>Order</span>
                                 </Link>
                             </li>
                             <li>
@@ -62,7 +62,7 @@ const Slidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/dashboard/admin/manageOrders" style={{ textDecoration: "none", color: "white" }} >
+                                <Link to="/dashboard/admin/manage" style={{ textDecoration: "none", color: "white" }} >
                                     <FontAwesomeIcon icon={faFileAlt} style={{ textDecoration: "none", color: "white" }} /> <span>Manage</span>
                                 </Link>
                             </li>
@@ -70,7 +70,9 @@ const Slidebar = () => {
                 }
             </ul>
             <div>
-                <Link to="/" ><FontAwesomeIcon icon={faSignOutAlt} style={{ textDecoration: "none", color: "white" }} /> <span>Logout</span></Link>
+                <Link to="/" ><FontAwesomeIcon icon={faSignOutAlt} style={{ textDecoration: "none", color: "white" }} /> 
+                <span>Logout</span>
+                </Link>
             </div>
         </div>
     );
