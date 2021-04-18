@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faCalendar, faHome, faGripHorizontal, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
+import {  faSignOutAlt, faCalendar, faHome, faGripHorizontal, faUserPlus, faCommentMedical } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import { UserContext } from '../../../App';
 import './Slidebar.scss';
@@ -28,7 +28,7 @@ const Slidebar = () => {
                     !isAdmin ?
                         (<div>
                             <li>
-                                <Link to="/serviceId" style={{ textDecoration: "none", color: "white" }}>
+                                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                                     <FontAwesomeIcon icon={faGripHorizontal} /> <span>Order</span>
                                 </Link>
                             </li>
@@ -39,7 +39,7 @@ const Slidebar = () => {
                             </li>
                             <li>
                                 <Link to="/dashboard/user/addreview" style={{ textDecoration: "none", color: "white" }}>
-                                    <FontAwesomeIcon icon={faHome} /> <span>Review</span>
+                                    <FontAwesomeIcon icon={faCommentMedical} /> <span>Review</span>
                                 </Link>
                             </li>
                         </div>)

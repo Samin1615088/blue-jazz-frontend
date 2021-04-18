@@ -13,16 +13,16 @@ const upcomingEventsData = [
         place: 'London, England'
     },
     {
-        date: '27 July, 2022',
-        eventName: 'PARTY AT NIGHT CLUB',
+        date: '21 June, 2022',
+        eventName: 'ROYAL BLUE MUSIC CONCERT',
         image: eventPic2,
-        place: 'London, England'
+        place: 'Paris, France'
     },
     {
-        date: '27 July, 2022',
-        eventName: 'PARTY AT NIGHT CLUB',
+        date: '01 July, 2022',
+        eventName: 'NH7 ROCK STAR NIGHTS',
         image: eventPic3,
-        place: 'London, England'
+        place: 'Meghalaya, India'
     }
 ]
 
