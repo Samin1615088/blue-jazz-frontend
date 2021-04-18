@@ -11,7 +11,7 @@ const DAddNewAdmin = () => {
 
 
         //sending data to server >
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://aqueous-earth-48070.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

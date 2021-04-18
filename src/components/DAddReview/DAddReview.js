@@ -17,7 +17,7 @@ const DAddReview = () => {
 
 
         //sending data to server >
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://aqueous-earth-48070.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

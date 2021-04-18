@@ -10,7 +10,7 @@ const DManageAdmin = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getAdminServices/`)
+        fetch(`https://aqueous-earth-48070.herokuapp.com/getAdminServices/`)
             .then(response => response.json())
             .then(data => {
                 setAllOrders(data);

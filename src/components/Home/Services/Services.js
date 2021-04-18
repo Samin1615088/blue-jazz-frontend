@@ -16,7 +16,7 @@ const Services = ({ reference }) => {
 
     //get all products from server>>
     useEffect(() => {
-        fetch(`http://localhost:5000/allServices`)
+        fetch(`https://aqueous-earth-48070.herokuapp.com/allServices`)
             .then(response => response.json())
             .then(data => {
                 setAllServices(data);

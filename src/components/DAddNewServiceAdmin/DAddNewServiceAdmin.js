@@ -27,7 +27,7 @@ const DAddNewServiceAdmin = () => {
         formData.append('price', serviceInfo.price);
         console.log(formData);
 
-        fetch('http://localhost:5000/addServices', {
+        fetch('https://aqueous-earth-48070.herokuapp.com/addServices', {
             method: 'POST',
             body: formData
         })

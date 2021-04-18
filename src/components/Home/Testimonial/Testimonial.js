@@ -14,7 +14,7 @@ const Testimonial = () => {
 
     //get all Testimonials from server>>
     useEffect(() => {
-        fetch(`http://localhost:5000/allTestimonials`)
+        fetch(`https://aqueous-earth-48070.herokuapp.com/allTestimonials`)
             .then(response => response.json())
             .then(data => {
                 setAllTestimonials(data);

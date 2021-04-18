@@ -11,7 +11,7 @@ const DUserAllServices = () => {
     // const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getUserServices/${userStatus.email}`)
+        fetch(`https://aqueous-earth-48070.herokuapp.com/getUserServices/${userStatus.email}`)
             .then(response => response.json())
             .then(data => {
                 setServices(data);
