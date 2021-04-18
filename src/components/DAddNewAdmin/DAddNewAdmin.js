@@ -56,7 +56,8 @@ const DAddNewAdmin = () => {
                     </div>
                 </div>
             </div>
-        </section>);
+        </section>
+        );
 };
 
 export default DAddNewAdmin;

@@ -13,6 +13,7 @@ import DUserAllServices from './components/DUserAllServices/DUserAllServices';
 import DAddReview from './components/DAddReview/DAddReview';
 import DAddNewAdmin from './components/DAddNewAdmin/DAddNewAdmin';
 import DAllOrderedServiceAdmin from './components/DAllOrderedServiceAdmin/DAllOrderedServiceAdmin';
+import DAddNewServiceAdmin from './components/DAddNewServiceAdmin/DAddNewServiceAdmin';
 
 export const UserContext = createContext();
 
@@ -47,6 +48,10 @@ function App() {
 
             <PrivateRoute path="/dashboard/admin/makeAdmin">
               <DAddNewAdmin />
+            </PrivateRoute>
+            
+            <PrivateRoute path="/dashboard/admin/addServices">
+              <DAddNewServiceAdmin />
             </PrivateRoute>
             {/* danger */}
 
