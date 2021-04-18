@@ -5,7 +5,7 @@ import { UserContext } from '../../App';
 
 const DAddReview = () => {
     //USER CONTEXT data receiving using context>
-    const [userStatus, setUserStatus] = useContext(UserContext);
+    const [userStatus] = useContext(UserContext);
     //USER CONTEXT data receiving using context<
 
 
@@ -39,45 +39,43 @@ const DAddReview = () => {
                 <div className="col-md-9 col-sm-6 col-12 d-flex justify-content-center vh-100">
                     <div className="container  d-flex flex-column justify-content-center ">
                         <h2 className="text-center">Do you have a moment to give us your valuable feedback?</h2>
-                        {
-                            <div className="bg-dark p-5">
-                                <form onSubmit={handleSubmit(onSubmit)}>
-                                    <fieldset>
-                                        <div className="form-group mb-3">
-                                            <label className="form-label text-light fs-5 w-100">Your Name
+                        <div className="bg-dark p-5">
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <fieldset>
+                                    <div className="form-group mb-3">
+                                        <label className="form-label text-light fs-5 w-100">Your Name
                                                 <input type="text" id="nameInput" className="form-control" placeholder="Name" value={userStatus.displayName} readOnly {...register("userName")} />
-                                            </label>
-                                        </div>
-                                        <div className="form-group mb-3 ">
-                                            <label className="form-label text-light fs-5 w-100">Your Feedback
-                                                <input type="text" id="msgInput" className="form-control pb-5" placeholder="Write here" {...register("msg")} />
-                                            </label>
-                                        </div>
-                                        <div className="form-group mb-3 w-25">
-                                            <label className="form-label text-light fs-5 w-100">Give Us Rating
-                                            <br />
-                                                <select className="form-select"  {...register("rating")}>
-                                                    <option type="number" value={1}>1</option>
-                                                    <option type="number" value={2}>2</option>
-                                                    <option type="number" value={3}>3</option>
-                                                    <option type="number" value={4}>4</option>
-                                                    <option type="number" value={5} selected>5</option>
-                                                </select>
-                                            </label>
-                                        </div>
-
-                                    </fieldset>
-                                    (<div className="text-center">
-                                        <button type="submit" className="btn btn-brand">Submit</button>
+                                        </label>
                                     </div>
-                                </form>
-                            </div>
-                        }
+                                    <div className="form-group mb-3 ">
+                                        <label className="form-label text-light fs-5 w-100">Your Feedback
+                                                <input type="text" id="msgInput" className="form-control pb-5" placeholder="Write here" {...register("msg")} />
+                                        </label>
+                                    </div>
+                                    <div className="form-group mb-3 w-25">
+                                        <label className="form-label text-light fs-5 w-100">Give Us Rating
+                                            <br />
+                                            <select className="form-select"  {...register("rating")}>
+                                                <option type="number" value={1}>1</option>
+                                                <option type="number" value={2}>2</option>
+                                                <option type="number" value={3}>3</option>
+                                                <option type="number" value={4}>4</option>
+                                                <option type="number" value={5} selected>5</option>
+                                            </select>
+                                        </label>
+                                    </div>
+
+                                </fieldset>
+                                <div className="text-center">
+                                    <button type="submit" className="btn btn-brand">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    );
+    )
 };
 
 export default DAddReview;

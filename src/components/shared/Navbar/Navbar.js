@@ -19,7 +19,7 @@ const Navbar = () => {
                             <Link className="nav-link fw-bold me-5 " to="/dashboard/user/orders">Dashboard</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link fw-bold me-5" to="/#">Navbar 1</Link>
+                            <Link className="nav-link fw-bold me-5" to="/dashboard/admin/allorders">Admin</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link fw-bold me-5" to="/#">Navbar 2</Link>
