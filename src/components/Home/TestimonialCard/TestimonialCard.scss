@@ -19,6 +19,10 @@ $color-bg-white-shade: #eaf4fc;
   background-color: $color-bg-white-shade;
   color: #ffbf00;
 }
+.testimonial-card-container:hover {
+  border: 4px solid rgb(245, 2, 2);
+  background-color: rgb(113, 186, 250);
+}
 
 /* button */
 .btn-brand {
