@@ -60,7 +60,7 @@ const ProcessOrder = () => {
         console.log("currentOrderInfo", currentOrderInfo);
 
         //sending data to server >
-        fetch('https://localhost:5000/processOrder', {
+        fetch('http://localhost:5000/processOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(currentOrderInfo)
@@ -68,7 +68,9 @@ const ProcessOrder = () => {
             .then(response => response.json())
             .then(res => {
                 console.log("response from server", res);
-                history.push('/dashboard')
+                console.log('before', history);
+                history.push("/dashboard/user/orders");
+                console.log('after', history);
             });
         //sending data to server <
 

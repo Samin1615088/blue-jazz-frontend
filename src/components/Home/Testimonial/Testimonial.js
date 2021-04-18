@@ -18,6 +18,7 @@ const Testimonial = () => {
             .then(response => response.json())
             .then(data => {
                 setAllTestimonials(data);
+                console.log('get testimonial', data[3].profilePic);
             })
             .catch(error => console.log(error))
     }, []);
