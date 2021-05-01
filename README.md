@@ -1,4 +1,4 @@
-# BLUE JAZZ WEBSITE-client
+# BLUE JAZZ WEBSITE-fronend
 This is a website of an event management company named BLUE JAZZ who provides different facilities in larger exciting music festivals around the world.<br/>
 
 
