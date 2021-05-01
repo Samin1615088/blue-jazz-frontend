@@ -12,7 +12,6 @@ Demo Website [LiveSite Link](https://bluejazz-2eacf.web.app/) <br/>
 
 Frontend github: [Code Link](https://github.com/Samin1615088/blue-jazz-frontend)<br/>
 Backend github: [Code Link](https://github.com/Samin1615088/blue-jazz-backend)<br/>
-Backend Live [Heroku Link](https://aqueous-earth-48070.herokuapp.com/)<br/>
 
 
 
